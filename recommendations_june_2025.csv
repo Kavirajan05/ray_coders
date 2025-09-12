@@ -1,0 +1,6 @@
+product_id,product_name,recommended_purchase,predicted_sales,predicted_revenue,predicted_profit,investment_needed
+BREAD_LOAF_001,Bread Loaf,3188,2773,97055.0,19411.0,89264.0
+EGGS_DOZEN_001,Eggs (12 pieces),2764,2404,173088.0,34617.6,159206.40000000002
+MILK_1L_001,Milk 1L Pack,5055,4396,123088.0,24617.600000000002,113232.0
+OIL_1L_001,Cooking Oil 1L,1345,1170,169650.0,33930.0,156020.0
+RICE_1KG_001,Rice 1KG Pack,1814,1578,102570.0,20514.0,94328.0
