@@ -199,13 +199,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initializeApp() {
-  showPage('login');
   setupEventListeners();
   initializeEnhancedVoiceFeatures();
   populateTables();
   initializeChatbot();
   initializeEmailAlertSystem();
-  
   // Initialize charts after a short delay
   setTimeout(() => {
     initializeCharts();
@@ -434,11 +432,7 @@ function updateVoiceEngineStatus(engine, status, accuracy) {
 }
 
 function setupEventListeners() {
-  // Login form
-  const loginForm = document.getElementById('loginForm');
-  if (loginForm) {
-    loginForm.addEventListener('submit', handleLogin);
-  }
+  // ...existing code...
   
   // Logout button
   const logoutBtn = document.getElementById('logoutBtn');
@@ -525,41 +519,7 @@ function setupEventListeners() {
   }
 }
 
-function handleLogin(e) {
-  e.preventDefault();
-  
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
-  const role = document.getElementById('role').value;
-  
-  if (username && password) {
-    currentUser = { username, role };
-    
-    const currentUserSpan = document.getElementById('currentUser');
-    if (currentUserSpan) {
-      currentUserSpan.textContent = `Welcome, ${username}`;
-    }
-    
-    const adminNavItem = document.getElementById('adminNavItem');
-    if (adminNavItem) {
-      if (role === 'admin') {
-        adminNavItem.classList.remove('hidden');
-      } else {
-        adminNavItem.classList.add('hidden');
-      }
-    }
-    
-    showPage('main');
-    showContentPage('dashboard');
-    showNotification('Login successful! Enhanced ML analytics and email alerts ready.', 'success');
-    
-    setTimeout(() => {
-      initializeCharts();
-      populateSuggestionChips();
-      updateEmailStatus();
-    }, 200);
-  }
-}
+// ...existing code...
 
 function handleLogout() {
   currentUser = null;
