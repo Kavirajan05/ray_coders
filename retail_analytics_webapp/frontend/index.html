@@ -9,42 +9,8 @@
 </head>
 <body>
     <!-- Login Page -->
-    <div id="loginPage" class="page active">
-        <div class="login-container">
-            <div class="login-card">
-                <div class="login-header">
-                    <h1>RetailSight Pro</h1>
-                    <p>Enhanced ML Analytics Platform with Email Alerts</p>
-                </div>
-                <form id="loginForm" class="login-form">
-                    <div class="form-group">
-                        <label class="form-label" for="username">Username</label>
-                        <input type="text" id="username" class="form-control" placeholder="Enter your username" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="password">Password</label>
-                        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="role">Role</label>
-                        <select id="role" class="form-control">
-                            <option value="retailer">Retailer</option>
-                            <option value="admin">Admin</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="remember"> Remember me
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--full-width">Sign In</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <!-- Main Application -->
-    <div id="mainApp" class="main-app hidden">
+    <div id="mainApp" class="main-app">
         <!-- Navigation Sidebar -->
         <nav class="sidebar">
             <div class="sidebar-header">
@@ -60,7 +26,6 @@
                 <li><a href="#" data-page="email-alerts" class="nav-link">Email Alert System</a></li>
                 <li><a href="#" data-page="revenue" class="nav-link">Revenue Analytics</a></li>
                 <li><a href="#" data-page="profit" class="nav-link">Profit Analytics</a></li>
-                <li><a href="#" data-page="visual" class="nav-link">Visual Analytics</a></li>
                 <li><a href="#" data-page="stock" class="nav-link">Stock Management</a></li>
                 <li><a href="#" data-page="ml" class="nav-link">ML Predictions</a></li>
                 <li><a href="#" data-page="chatbot" class="nav-link">AI Assistant</a></li>
@@ -172,29 +137,35 @@
 
                 <!-- Advanced Charts Grid -->
                 <div class="advanced-charts-grid">
-                    <div class="chart-container" style="position: relative; height: 400px;">
-                        <h3>Time Series Predictions with Confidence Intervals</h3>
-                        <canvas id="timeSeriesChart"></canvas>
+                    <div class="chart-row">
+                        <div class="chart-description chart-desc-left">
+                            <h4>Description</h4>
+                            <p>Visualizes predicted demand over time with shaded confidence intervals, highlighting forecast reliability and trends.</p>
+                        </div>
+                        <div class="chart-container" style="position: relative; height: 400px;">
+                            <h3>Time Series Predictions with Confidence Intervals</h3>
+                            <canvas id="timeSeriesChart"></canvas>
+                        </div>
                     </div>
-                    <div class="chart-container" style="position: relative; height: 400px;">
-                        <h3>Seasonal Pattern Analysis</h3>
-                        <canvas id="seasonalPatternsChart"></canvas>
+                    <div class="chart-row">
+                        <div class="chart-description chart-desc-left">
+                            <h4>Description</h4>
+                            <p>Shows how weather variables affect product demand, helping identify seasonal or climate-driven sales patterns.</p>
+                        </div>
+                        <div class="chart-container" style="position: relative; height: 400px;">
+                            <h3>Weather Impact on Demand</h3>
+                            <canvas id="weatherImpactChart"></canvas>
+                        </div>
                     </div>
-                    <div class="chart-container" style="position: relative; height: 400px;">
-                        <h3>Multi-Product Correlation Matrix</h3>
-                        <canvas id="correlationChart"></canvas>
-                    </div>
-                    <div class="chart-container" style="position: relative; height: 400px;">
-                        <h3>Weather Impact on Demand</h3>
-                        <canvas id="weatherImpactChart"></canvas>
-                    </div>
-                    <div class="chart-container" style="position: relative; height: 400px;">
-                        <h3>Profit Prediction with Variance Analysis</h3>
-                        <canvas id="profitPredictionChart"></canvas>
-                    </div>
-                    <div class="chart-container" style="position: relative; height: 400px;">
-                        <h3>Confidence Score Heatmap</h3>
-                        <canvas id="confidenceHeatmapChart"></canvas>
+                    <div class="chart-row">
+                        <div class="chart-description chart-desc-left">
+                            <h4>Description</h4>
+                            <p>Forecasts future profit margins and highlights variance, supporting financial planning and risk assessment.</p>
+                        </div>
+                        <div class="chart-container" style="position: relative; height: 400px;">
+                            <h3>Profit Prediction with Variance Analysis</h3>
+                            <canvas id="profitPredictionChart"></canvas>
+                        </div>
                     </div>
                 </div>
 
@@ -325,7 +296,7 @@
                     <p>Detailed revenue analysis and trends</p>
                 </div>
                 
-                <div class="analytics-grid">
+                <!-- <div class="analytics-grid">
                     <div class="chart-container" style="position: relative; height: 400px;">
                         <h3>Monthly Revenue</h3>
                         <canvas id="monthlyRevenueChart"></canvas>
@@ -334,7 +305,7 @@
                         <h3>Product Revenue Breakdown</h3>
                         <canvas id="productRevenueChart"></canvas>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="revenue-table">
                     <h3>Product Performance</h3>
@@ -365,10 +336,10 @@
                         <h3>Monthly Profit Trend</h3>
                         <canvas id="monthlyProfitChart"></canvas>
                     </div>
-                    <div class="chart-container" style="position: relative; height: 400px;">
+                    <!-- <div class="chart-container" style="position: relative; height: 400px;">
                         <h3>Profit Margins by Product</h3>
                         <canvas id="profitMarginChart"></canvas>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="profit-insights">
@@ -390,7 +361,7 @@
                 </div>
             </div>
 
-            <div id="visualPage" class="content-page">
+            <!-- <div id="visualPage" class="content-page">
                 <div class="page-header">
                     <h1>Visual Analytics</h1>
                     <p>Comprehensive visual data representation</p>
@@ -414,7 +385,7 @@
                         <canvas id="accuracyChart"></canvas>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div id="stockPage" class="content-page">
                 <div class="page-header">

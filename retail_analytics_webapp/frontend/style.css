@@ -1,3 +1,14 @@
+/* AI Assistant Voice Input - Make input area white */
+.chat-input-area input[type="text"],
+.chat-input-area .form-control {
+  background: #fff !important;
+  color: #222 !important;
+  border: 1px solid var(--color-border, #e0e0e0);
+}
+
+.chat-input-area input[type="text"]::placeholder {
+  color: #888 !important;
+}
 :root {
   /* Primitive Color Tokens */
   --color-white: rgba(255, 255, 255, 1);
@@ -9,8 +20,8 @@
   --color-gray-400: rgba(119, 124, 124, 1);
   --color-slate-500: rgba(98, 108, 113, 1);
   --color-brown-600: rgba(94, 82, 64, 1);
-  --color-charcoal-700: rgba(31, 33, 33, 1);
-  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-charcoal-700: rgb(175, 205, 205);
+  --color-charcoal-800: rgb(144, 156, 156);
   --color-slate-900: rgba(19, 52, 59, 1);
   --color-teal-300: rgba(50, 184, 198, 1);
   --color-teal-400: rgba(45, 166, 178, 1);
@@ -900,7 +911,7 @@ select.form-control {
     --color-background: var(--color-charcoal-700);
     --color-surface: var(--color-charcoal-800);
     --color-text: var(--color-gray-200);
-    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-text-secondary: rgba(var(--color-white-300-rgb), 0.7);
     --color-primary: var(--color-teal-300);
     --color-primary-hover: var(--color-teal-400);
     --color-primary-active: var(--color-teal-800);
